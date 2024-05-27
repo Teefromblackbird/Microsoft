@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odzyskiwanie konta</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: left;
+            font-size: 16px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .header span {
+            font-size: 20px;
+            color: #666;
+        }
+        .container h1 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .container p {
+            font-size: 16px;
+            color: #000;
+        }
+        .container input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px 10px 10px 0;
+            margin: 20px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+        .container .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .container button {
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .container .cancel {
+            background-color: #cccccc;
+        }
+        .container .next {
+            background-color: #0067b8;
+            color: white;
+        }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: calc(100% - 60px);
+            text-align: right;
+            font-size: 12px;
+            color: #000;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        .footer a {
+            color: #000;
+            text-decoration: none;
+            position: relative;
+        }
+        .footer a:hover {
+            color: #000;
+        }
+        .footer a:hover::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo">
+            <span>Microsoft</span>
+        </div>
+        <h1>Odzyskiwanie konta</h1>
+        <p>Możemy pomóc Ci zresetować hasło i informacje zabezpieczające. Zacznij od wprowadzenia nazwy konta Microsoft, po czym postępuj zgodnie z instrukcjami poniżej.</p>
+        <input type="text" placeholder="Adres e-mail, telefon lub nazwa użytkownika Skype">
+        <div class="buttons">
+            <button class="cancel">Anuluj</button>
+            <button class="next" onclick="window.location.href='nowa_strona.html';">Dalej</button>
+        </div>
+    </div>
+    <div class="footer">
+        <a href="https://www.microsoft.com/pl-pl/servicesagreement/default.aspx">Warunki użytkowania</a>
+        <a href="https://go.microsoft.com/fwlink/?LinkID=521839">Prywatność i pliki cookie</a>
+    </div>
+</body>
+</html>

